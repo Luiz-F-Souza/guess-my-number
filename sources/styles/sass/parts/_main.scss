@@ -1,0 +1,129 @@
+@use "variables" as vrb;
+
+.container--the-game{
+  width: 100%;
+
+  // "ESCOLHA ENTRE 1 E X" && TIP IF CHOOSED WRONG &&
+  //  INPUT FIELD && CHANCES LEFT AND BTN TRY
+  .container--main-game-part{
+
+    display: grid;
+    row-gap: 6vh;
+    width: 100%;
+    .text-choose-a-number{
+      font-size: 2rem;
+      padding-bottom: 1.5rem;
+      text-align: center;
+      width: 100%;
+    }
+
+    .text--tip-if-wrong{
+      font-size: vrb.$font-size--main;
+      text-align: center;
+      height: 4rem;
+      width: 100%;
+    }
+
+    
+    // INPUT FIELD
+    .number-choosed{
+
+      justify-self: center;
+      width: clamp(10rem, 22vw, 15rem);
+      height: clamp(7rem, 16vw, 12rem);
+      border-radius: 80%;
+
+
+      border: vrb.$border--main;
+
+      outline: none;
+
+      text-align: center;
+      font-size: vrb.$font-size--main;
+
+
+    }
+
+
+    .container--heart-and-btn{
+      
+      display: grid;
+      grid-template-columns: repeat(2,1fr);
+      border: vrb.$border--main;
+      box-shadow: 0 .5rem 2rem .1rem rgba(0, 0, 0, 0.236);
+      
+
+      .container--svg-and-rest-of-life{
+        border-right: vrb.$border--main;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        column-gap: 1.2rem;
+        
+
+        background-color: vrb.$color-btn-and-life;
+    
+        //  TEXT
+        .rest-of-life{
+          align-self: center;
+          font-size: vrb.$font-size--life-and-btn;
+       }
+      }
+    }
+
+    .btn--try{
+      border: none;
+
+      
+
+      background-color: vrb.$color-btn-and-life;
+
+      font-size: vrb.$font-size--life-and-btn;
+      font-family: 'Roboto', sans-serif;
+
+      &:hover{
+        cursor: pointer;
+
+        transform: perspective(5rem) translateZ(.4rem);
+
+        box-shadow: inset 0 0 0 .2rem rgb(0, 0, 0);
+        
+      }
+
+      &:active{
+        cursor: grab;
+        transform: perspective(5rem) translateZ(.2rem);
+      }
+
+    }
+
+    margin-bottom: 4rem;
+  }
+
+
+  .container--top-score{
+
+
+    .top-score{
+
+      display: flex;
+      justify-content: space-around;
+
+
+      .x-place{
+
+        .medals{
+          width: 5rem;
+          height: 5rem;
+        }
+
+        .score-text{
+          text-align: center;
+          font-size: vrb.$font-size--main + 1rem;
+        }
+      }
+    }
+  }
+
+  margin-bottom: 3rem;
+}

@@ -1,0 +1,14 @@
+{
+  "name": "guess-my-number",
+  "version": "1.0.0",
+  "description": "game wich the goal its to guess the random number thats between the selected range.",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass styles/sass/main.scss styles/css/main.css -w"
+  },
+  "author": "Luiz Felipe de Souza Barbosa",
+  "license": "ISC",
+  "dependencies": {
+    "sass": "^1.50.0"
+  }
+}

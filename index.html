@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JOGAR: Adivinhe meu número</title>
+  <link rel="stylesheet" href="sources/styles/css/main.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;1,300;1,400&display=swap"
+    rel="stylesheet">
+</head>
+
+<body>
+
+  <div class="global-container">
+    <header class="container--level-select">
+
+      <p class="text--level-select text--selecting-level">Selecione a dificuldade</p>
+      <input class="bar--level-select" type="range" min="10" max="50" value="10">
+      <p class="text--level-select text-multiplie">Multiplicador: X<span class="number-to-multiplie">1</span></p>
+      <p class="text--level-select text--name-of-level">Fácil 🤡</p>
+
+    </header>
+
+    <main class="container--the-game">
+
+      <article class="container--main-game-part">
+
+        <p class="text--the-game text-choose-a-number">Escolha um número entre 1 e <span
+            class="number--to-choose">10</span></p>
+
+        <p class="text--tip-if-wrong">Digite um número abaixo e clique em TENTAR para iniciar o jogo</p>
+
+        <input class="number-choosed" type="text" name="number-choosed">
+
+
+
+
+        <div class="container--heart-and-btn">
+
+          <div class="container--svg-and-rest-of-life">
+
+            <!-- NORMAL HEART -->
+            <svg class="normal-heart hearts-svg" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img"
+              width="3.6rem" height="3.6rem" preserveAspectRatio="xMidYMid meet" viewBox="0 0 36 36">
+              <path fill="#f24e1e"
+                d="M33 7.64c-1.34-2.75-5.2-5-9.69-3.69A9.87 9.87 0 0 0 18 7.72a9.87 9.87 0 0 0-5.31-3.77C8.19 2.66 4.34 4.89 3 7.64c-1.88 3.85-1.1 8.18 2.32 12.87C8 24.18 11.83 27.9 17.39 32.22a1 1 0 0 0 1.23 0c5.55-4.31 9.39-8 12.07-11.71c3.41-4.69 4.19-9.02 2.31-12.87Z"
+                class="clr-i-solid clr-i-solid-path-1" />
+              <path fill="none" d="M0 0h36v36H0z" />
+            </svg>
+
+            <!-- HEART BREAK -->
+            <svg class="heart-break hidden hearts-svg" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img"
+              width="3.6rem" height="3.6rem" preserveAspectRatio="xMidYMid meet" viewBox="0 0 36 36">
+              <path fill="#f24e1e"
+                d="M33 7.64c-1.34-2.75-5.2-5-9.69-3.69a11.55 11.55 0 0 0-5.12 3.55a16.89 16.89 0 0 0-2.48 4.56L22.27 15l-5.57 5.26L19 23l-1.57 1.34l-3.6-4.22l4.74-4.51l-5.44-2.41a19.49 19.49 0 0 1 2.3-5.5a14.77 14.77 0 0 1 1.06-1.54h.06a9.66 9.66 0 0 0-3.89-2.18C8.19 2.66 4.34 4.89 3 7.64c-1.88 3.85-1.1 8.18 2.32 12.87C8 24.18 11.83 27.9 17.39 32.22a1 1 0 0 0 1.23 0c5.55-4.31 9.39-8 12.07-11.71c3.41-4.69 4.19-9.02 2.31-12.87Z"
+                class="clr-i-solid clr-i-solid-path-1" />
+              <path fill="none" d="M0 0h36v36H0z" />
+            </svg>
+
+            <p class="rest-of-life">10</p>
+
+          </div>
+
+          <button class="btn--try">Tentar</button>
+
+
+        </div>
+
+      </article>
+
+
+      <article class="container--top-score">
+        <div class="top-score">
+
+          <section class="first-place x-place">
+            <svg class="medals" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="4rem"
+              height="4rem" preserveAspectRatio="xMidYMid meet" viewBox="0 0 64 64">
+              <path fill="#428bc1" d="M46.1 2L34.8 18.9h5.6L53 2z" />
+              <path fill="#e8e8e8" d="M40.4 2L29.2 18.9h5.6L46.1 2z" />
+              <path fill="#ed4c5c" d="M34.8 2L23.6 18.9h5.6L40.4 2z" />
+              <g fill="#ffce31">
+                <circle cx="32" cy="41.4" r="20.6" />
+                <path
+                  d="M21.7 15.1c-.5 0-.9.4-.9.9v8.4c0 .5.4.9.9.9h20.6c.5 0 .9-.4.9-.9V16c0-.5-.4-.9-.9-.9H21.7m19.7 6.6c0 .5-.4.9-.9.9H23.6c-.5 0-.9-.4-.9-.9v-3.8c0-.5.4-.9.9-.9h16.9c.5 0 .9.4.9.9v3.8" />
+              </g>
+              <path fill="#89664c"
+                d="M14.3 43.8c0-11.2 8.6-20.3 19.6-21.1c-.5 0-1.1-.1-1.6-.1c-10.5 0-19 8.5-19 19.1c0 3.1.8 6.1 2.1 8.7c-.7-2.1-1.1-4.3-1.1-6.6"
+                opacity=".5" />
+              <path fill="#fff"
+                d="M39.9 57.3C49.2 51.1 52 39 46.6 29.6l.9 1.2c5.8 8.6 3.4 20.3-5.3 26.2c-2.6 1.8-5.5 2.8-8.4 3.1c2.2-.6 4.2-1.5 6.1-2.8"
+                opacity=".33" />
+              <path fill="#ed4c5c" d="M23.6 18.9h5.6L17.9 2H11z" />
+              <path fill="#e8e8e8" d="M29.2 18.9h5.6L23.6 2h-5.7z" />
+              <path fill="#3e4347" d="M32.9 4.8L30.1 9l6.6 9.9h3.7l1-1.4z" opacity=".5" />
+              <path fill="#428bc1" d="M34.8 18.9h5.6L29.2 2h-5.6z" />
+              <path fill="#89664c"
+                d="M26.8 35.2v1c1 0 1.9-.2 2.8-.6v-1.4c-.8.6-1.7.9-2.8 1m6.6-6.5h.9v21.6h-.9zm3.8 22.5V54H26.8v1h11.3v-3.8z"
+                opacity=".5" />
+              <path fill="#fff"
+                d="M34.3 50.3h2.8v.9h-2.8zm-3.7-21.6h2.8v-.9h-3.8c0 2.1-1.7 3.8-3.8 3.8v3.7c.3 0 .6 0 .9-.1v-2.8c2.2.1 3.9-1.6 3.9-3.7m0 22.5v-16c-.3.2-.6.3-.9.5v14.6h-3.8V54h.9v-2.8h3.8"
+                opacity=".33" />
+            </svg>
+            <p class="first-place-score score-text">0</p>
+          </section>
+
+          <section class="seccond-place x-place">
+            <svg class="medals" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="4rem"
+              height="4rem" preserveAspectRatio="xMidYMid meet" viewBox="0 0 64 64">
+              <path fill="#428bc1" d="M46.1 2L34.8 18.9h5.6L53 2z" />
+              <path fill="#e8e8e8" d="M40.4 2L29.2 18.9h5.6L46.1 2z" />
+              <path fill="#ed4c5c" d="M34.8 2L23.6 18.9h5.6L40.4 2z" />
+              <g fill="#b2c1c0">
+                <circle cx="32" cy="41.4" r="20.6" />
+                <path
+                  d="M21.7 15.1c-.5 0-.9.4-.9.9v8.4c0 .5.4.9.9.9h20.6c.5 0 .9-.4.9-.9V16c0-.5-.4-.9-.9-.9H21.7m19.7 6.6c0 .5-.4.9-.9.9H23.6c-.5 0-.9-.4-.9-.9v-3.8c0-.5.4-.9.9-.9h16.9c.5 0 .9.4.9.9v3.8" />
+              </g>
+              <path fill="#3e4347"
+                d="M14.3 43.8c0-11.2 8.6-20.3 19.6-21.1c-.5 0-1.1-.1-1.6-.1c-10.5 0-19 8.5-19 19.1c0 3.1.8 6.1 2.1 8.7c-.7-2.1-1.1-4.3-1.1-6.6"
+                opacity=".5" />
+              <path fill="#fff"
+                d="M39.9 57.3C49.2 51.1 52 39 46.6 29.6c.3.4.6.8.9 1.3c5.8 8.6 3.4 20.3-5.3 26.2c-2.6 1.8-5.5 2.8-8.4 3.1c2.2-.7 4.2-1.6 6.1-2.9"
+                opacity=".33" />
+              <path fill="#ed4c5c" d="M23.6 18.9h5.6L17.9 2H11z" />
+              <path fill="#e8e8e8" d="M29.2 18.9h5.6L23.6 2h-5.7z" />
+              <path fill="#3e4347" d="M32.9 4.8L30.1 9l6.6 9.9h3.7l1-1.4z" opacity=".5" />
+              <path fill="#428bc1" d="M34.8 18.9h5.6L29.2 2h-5.6z" />
+              <path fill="#3e4347"
+                d="M31.5 31.5c-2.1 0-3.8 1.7-3.8 3.7H25c0 .3-.1.6-.1.9h3.8c0-2.1 1.7-3.8 3.8-3.8c.8 0 1.5.3 2.1.7c-.7-.8-1.8-1.5-3.1-1.5M39 54H25v1h15v-3.8h-1zm-7.5-11.2c-2.1 0-3.8 1.7-3.8 3.8v3.8h.9v-2.8c0-2.1 1.7-3.8 3.8-3.8c4.1 0 7.5-3.4 7.5-7.5c0-2.3-1-4.4-2.7-5.8c1.1 1.3 1.8 3 1.8 4.8c0 4.1-3.3 7.5-7.5 7.5"
+                opacity=".5" />
+              <path fill="#fff"
+                d="M28.7 50.3H39v.9H28.7zM32.5 40c2.1 0 3.8-1.7 3.8-3.8c0-1.3-.6-2.4-1.6-3.1c.4.6.7 1.3.7 2.1c0 2.1-1.7 3.8-3.8 3.8c-4.1 0-7.5 3.4-7.5 7.5V54h.9v-6.6c0-4.1 3.3-7.4 7.5-7.4m0-11.3c1.8 0 3.5.7 4.8 1.8c-1.4-1.6-3.4-2.7-5.8-2.7c-4.1 0-7.5 3.4-7.5 7.5h1c.5-3.7 3.6-6.6 7.5-6.6"
+                opacity=".33" />
+            </svg>
+            <p class="seccond-place-score score-text">0</p>
+          </section>
+
+          <section class="third-place x-place">
+            <svg class="medals" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="4rem"
+              height="4rem" preserveAspectRatio="xMidYMid meet" viewBox="0 0 64 64">
+              <path fill="#428bc1" d="M46.1 2L34.8 18.9h5.6L53 2z" />
+              <path fill="#e8e8e8" d="M40.4 2L29.2 18.9h5.6L46.1 2z" />
+              <path fill="#ed4c5c" d="M34.8 2L23.6 18.9h5.6L40.4 2z" />
+              <g fill="#d3976e">
+                <circle cx="32" cy="41.4" r="20.6" />
+                <path
+                  d="M21.7 15.1c-.5 0-.9.4-.9.9v8.4c0 .5.4.9.9.9h20.6c.5 0 .9-.4.9-.9V16c0-.5-.4-.9-.9-.9H21.7m19.7 6.6c0 .5-.4.9-.9.9H23.6c-.5 0-.9-.4-.9-.9v-3.8c0-.5.4-.9.9-.9h16.9c.5 0 .9.4.9.9v3.8" />
+              </g>
+              <path fill="#3e4347"
+                d="M14.3 43.8c0-11.2 8.6-20.3 19.6-21.1c-.5 0-1.1-.1-1.6-.1c-10.5 0-19 8.5-19 19.1c0 3.1.8 6.1 2.1 8.7c-.7-2.1-1.1-4.3-1.1-6.6"
+                opacity=".5" />
+              <path fill="#fff"
+                d="M39.9 57.3C49.2 51.1 52 39 46.6 29.6l.9 1.2c5.8 8.6 3.4 20.3-5.3 26.2c-2.6 1.8-5.5 2.8-8.4 3.1c2.2-.6 4.2-1.5 6.1-2.8"
+                opacity=".33" />
+              <path fill="#ed4c5c" d="M23.6 18.9h5.6L17.9 2H11z" />
+              <path fill="#e8e8e8" d="M29.2 18.9h5.6L23.6 2h-5.7z" />
+              <path fill="#3e4347" d="M32.9 4.8L30.1 9l6.6 9.9h3.7l1-1.4z" opacity=".5" />
+              <path fill="#428bc1" d="M34.8 18.9h5.6L29.2 2h-5.6z" />
+              <path fill="#3e4347"
+                d="M31.5 31.5c-2.1 0-3.8 1.7-3.8 3.7H25c0 .3-.1.6-.1.9h3.8c0-2.1 1.7-3.8 3.8-3.8c.8 0 1.5.3 2.1.7c-.7-.8-1.8-1.5-3.1-1.5m5.9 10.3c1.6-1.4 2.6-3.4 2.6-5.6c0-2.3-1-4.4-2.7-5.8c1.1 1.3 1.8 3 1.8 4.8c0 2.2-1 4.3-2.6 5.6c1.6 1.4 2.6 3.4 2.6 5.6c0 4.1-3.4 7.5-7.5 7.5c-1.8 0-3.5-.7-4.8-1.8c1.4 1.6 3.4 2.7 5.8 2.7c4.1 0 7.5-3.4 7.5-7.5c-.1-2.1-1.1-4.1-2.7-5.5"
+                opacity=".5" />
+              <path fill="#fff"
+                d="M32.5 28.7c1.8 0 3.5.7 4.8 1.8c-1.4-1.6-3.4-2.7-5.8-2.7c-4.1 0-7.5 3.4-7.5 7.5h1c.5-3.7 3.6-6.6 7.5-6.6m3.7 7.5c0-1.3-.6-2.4-1.6-3.1c.4.6.7 1.3.7 2.1c0 2.1-1.7 3.8-3.8 3.8v3.8c.3 0 .6.1.9.1V40c2.1 0 3.8-1.7 3.8-3.8m-3.7 15c2.1 0 3.8-1.7 3.8-3.8c0-1.3-.6-2.4-1.6-3.1c.4.6.7 1.3.7 2.1c0 2.1-1.7 3.8-3.8 3.8c-.8 0-1.5-.3-2.1-.7c.6 1.1 1.7 1.7 3 1.7m-4.6-3.7c-.1-.3-.1-.6-.1-.9H24c0 2.3 1 4.4 2.7 5.8c-1.1-1.3-1.8-3-1.8-4.8l3-.1"
+                opacity=".33" />
+            </svg>
+
+            <p class="third-place-score score-text">0</p>
+          </section>
+
+        </div>
+      </article>
+
+    </main>
+
+    <footer class="footer">
+      <p>Desenvolvido por: </p>
+      <h1><em>Luiz Felipe de Souza Barbosa</em></h1>
+    </footer>
+  </div>
+
+  <script src="sources/js/index.js"></script>
+</body>
+
+</html>

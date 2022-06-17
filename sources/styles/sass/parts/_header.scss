@@ -1,0 +1,23 @@
+@use 'variables' as vrb;
+
+.container--level-select{
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  place-items: center;
+
+  row-gap: min(1rem);
+  column-gap: max(.2rem);
+
+  .text--level-select{
+    font-size: vrb.$font-size--main;
+  }
+
+  .bar--level-select{
+    width: clamp(70%, 15rem, 22rem);
+    
+  }
+
+  margin-bottom: 5rem;
+
+}
